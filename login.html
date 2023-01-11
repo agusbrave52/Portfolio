@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+
+    body{
+        background-image: url("img/Fondo.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    #loginCard{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 3vh;
+        padding-top: 2vh;
+        width: 300px;
+        border: rgb(122, 235, 255) 1px solid;
+        border-radius: 10px;
+        background: linear-gradient(-45deg, #03003c, #170a45, #2a246a, #000000);
+	    background-size: 400% 400%;
+	    -webkit-animation: gradient 15s ease infinite;
+	        animation: gradient 15s ease infinite;
+        
+    }
+    @-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+    
+    hr{
+        margin-left: -3vh;
+        margin-right: -3vh;
+        color: rgb(122, 235, 255);
+    }
+    #logo{
+        position: absolute;
+        justify-content: center;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%,-50%);
+        width: 25%;
+        height: 25%;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div class="firefly"></div>
+        <div id="loginCard">
+            <span style="color: rgb(122, 235, 255);">Login</span>
+            <hr class="mt-2">
+            <div class="row">
+                <div class="form-floating mb-3 p-1">
+                    <input type="text" class="form-control bg-dark text-info" id="usuario" placeholder="Usuario">
+                    <label class="text-info" for="usuario">Usuario</label>
+                </div>
+                <div class="form-floating p-1">
+                    <input type="password" class="form-control bg-dark text-info" id="contrasena" placeholder="Contraseña">
+                    <label class="text-info" for="contrasena">Contraseña</label>
+                </div>
+            </div>
+            <hr>
+            <div class="row text-center">
+                <div class="col">
+                    <button class="btn btn-outline-info">Ingresar</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-outline-info">Registarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
