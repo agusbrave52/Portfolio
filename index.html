@@ -19,21 +19,9 @@
         background-size: cover;
     }
     #loginCard{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        padding: 3vh;
-        padding-top: 2vh;
-        width: 300px;
-        border: rgb(122, 235, 255) 1px solid;
-        border-radius: 10px;
-        background: linear-gradient(-45deg, #03003c, #170a45, #2a246a, #000000);
-	    background-size: 400% 400%;
-	    -webkit-animation: gradient 15s ease infinite;
-	        animation: gradient 15s ease infinite;
-        
+        display: contents;
     }
+
     @-webkit-keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -59,18 +47,14 @@
 }
     
     hr{
-        margin-left: -3vh;
-        margin-right: -3vh;
+        /* margin-left: -3vh;
+        margin-right: -3vh; */
         color: rgb(122, 235, 255);
-    }
-    #logo{
-        position: absolute;
-        justify-content: center;
-        left: 50%;
-        top: 20%;
-        transform: translate(-50%,-50%);
-        width: 25%;
-        height: 25%;
+        height: 4px !important;
+        background: linear-gradient(-45deg, #309fda, #3185c9, #192a88, #3185c9);
+	    background-size: 400% 400%;
+	    -webkit-animation: gradient 5s ease infinite;
+	        animation: gradient 5s ease infinite; */
     }
 </style>
 <body>
@@ -90,28 +74,28 @@
         <div class="firefly"></div>
         <div class="firefly"></div>
         <div class="firefly"></div>
-        <div id="loginCard">
-            <span style="color: rgb(122, 235, 255);">Login</span>
-            <hr class="mt-2">
+        <div id="loginCard" class="text-center shadow-lg" style="font-size: larger ;font-family:monospace;">
+            <span style="color: rgb(122, 235, 255);"><h1 class="lh-1 mt-3 mb-0">Agustin Bravo</h1><br><h4 class="lh-1 m-0">Portfolio</h4><br><h5 class="lh-1 mb-4">Programador web .Net Junior</h5></span>
+            <hr>
             <div class="row">
-                <div class="form-floating mb-3 p-1">
-                    <input type="text" class="form-control bg-dark text-info" id="usuario" placeholder="Usuario">
-                    <label class="text-info" for="usuario">Usuario</label>
-                </div>
-                <div class="form-floating p-1">
-                    <input type="password" class="form-control bg-dark text-info" id="contrasena" placeholder="Contraseña">
-                    <label class="text-info" for="contrasena">Contraseña</label>
+                <div class='col'>
+                    <ul class="nav nav-pills d-grid flex-nowrap" id="barra">
+                        <li class="nav-item btn btn-outline-info border-0 rounded-0 px-md-0">
+                            <a href="#" class="nav-link text-white text-nowrap">Sobre mi</a>
+                        </li>
+                        <li class="nav-item btn btn-outline-info border-0 rounded-0 px-md-0">
+                            <a href="#" class="nav-link text-white ">Proyectos</a>
+                        </li>
+                        <li class="nav-item btn btn-outline-info border-0 rounded-0 px-md-0">
+                            <a href="#" class="nav-link text-white ">Conocimientos</a>
+                        </li>
+                        <li class="nav-item btn btn-outline-info border-0 rounded-0 px-md-0">
+                            <a href="#" class="nav-link text-white ">Contacto</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <hr>
-            <div class="row text-center">
-                <div class="col">
-                    <button class="btn btn-outline-info">Ingresar</button>
-                </div>
-                <div class="col">
-                    <button class="btn btn-outline-info">Registarse</button>
-                </div>
-            </div>
         </div>
     </div>
 </body>
