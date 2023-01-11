@@ -1,36 +1,35 @@
-document.addEventListener("DOMContentLoaded", function(){
-    $("#infoPrincipal").hide();
-})
-function clickCortes(){
-    $("#listSorteos").fadeOut(0, function(){
-        $("#listReservar").fadeOut(0, function(){
-            $("#listado").fadeIn(250);
-        })
-    })
+function clickSobremi(){
+    $("#conocimientos").fadeOut(1, function(){
+        $("#contacto").fadeOut(1,function(){
+            $("#sobremi").slideToggle(800);
+        });
+    });
 }
-function clickSorteos(){
-    $("#listReservar").fadeOut(0, function(){
-        $("#listado").fadeOut(0, function(){
-            $("#listSorteos").fadeIn(250);
+function clickConocimientos(){
+    $("#sobremi").fadeOut(1, function(){
+        $("#contacto").fadeOut(1, function(){
+            $("#conocimientos").slideToggle(800);
         })
-    })
+    });
 }
-function clickReservar(){
-    $("#listSorteos").fadeOut(0, function(){
-        $("#listado").fadeOut(0, function(){
-            $("#listReservar").fadeIn(250);
+function clickContacto(){
+    $("#conocimientos").fadeOut(1, function(){
+        $("#sobremi").fadeOut(1, function(){
+            $("#contacto").slideToggle(800);
         })
-    })
+    });
 }
-window.addEventListener("scroll",function(){
-    if(window.pageYOffset >= 100){
-        $("#nave").css("background-color", "black");
-        $("#rama").removeClass("justify-content-center").addClass("justify-content-start");
-        $("#infoPrincipal").show();
-    }
-    else if(window.pageYOffset < 100){
-        $("#nave").css("background-color", "");
-        $("#rama").removeClass("justify-content-start").addClass("justify-content-center");
-        $("#infoPrincipal").hide();
-    }
-})
+// function clickSorteos(){
+//     $("#listReservar").fadeOut(0, function(){
+//         $("#listado").fadeOut(0, function(){
+//             $("#listSorteos").fadeIn(250);
+//         })
+//     })
+// }
+// function clickReservar(){
+//     $("#listSorteos").fadeOut(0, function(){
+//         $("#listado").fadeOut(0, function(){
+//             $("#listReservar").fadeIn(250);
+//         })
+//     })
+// }
