@@ -1,212 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Mi Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-    <script src="https://kit.fontawesome.com/dff6b72452.js" crossorigin="anonymous"></script>
 </head>
-<style>
-
-    body{
-        background-image: url("img/Fondo.png");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-    }
-    #loginCard{
-        display: contents;
-        font-family: 'Roboto', sans-serif;
-    }
-    li a{
-        font-size: x-large;
-    }
-
-    @-webkit-keyframes gradient {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-    }
-
-    @keyframes gradient {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-    }
-    
-    hr{
-        /* margin-left: -3vh;
-        margin-right: -3vh; */
-        color: rgb(122, 235, 255);
-        height: 4px !important;
-        background: linear-gradient(-45deg, #309fda, #3185c9, #192a88, #3185c9);
-	    background-size: 400% 400%;
-	    -webkit-animation: gradient 5s ease infinite;
-	        animation: gradient 5s ease infinite; 
-    }
-    #sobremi, #conocimientos, #contacto, #proyectos{
-        display: none;
-    }
-    span#titulo{
-
-    font: 700 4em/1 "Oswald", sans-serif;
-    letter-spacing: 0;
-    padding: .25em 0 .325em;
-    display: block;
-    margin: 0 auto;
-    text-shadow: 0 0 80px rgba(255,255,255,.5);
-    }
-</style>
 <body>
-    <div class="container">
-        <!-- Estrellas -->
-        <div class="firefly"></div>
-        <div class="firefly"></div>
-        <div class="firefly"></div>
-        <div class="firefly"></div>
-        <div class="firefly"></div>
-        <div class="firefly"></div>
-        <div class="firefly"></div>
-        <div class="firefly"></div>
-        <div class="firefly"></div>
-        <div class="firefly"></div>
-        <div class="firefly"></div>
-        <div class="firefly"></div>
-        <div class="firefly"></div>
-        <div class="firefly"></div>
-        <div class="firefly"></div>
-        <!-- Menu -->
-        <div id="loginCard" class="text-center shadow-lg">
-            <span style="color: rgb(122, 235, 255);" id="titulo"> <h1 class="lh-1 mt-3 mb-0">Agustin Bravo</h1><br><h4 class="lh-1 m-0">Portfolio</h4><br><h5 class="lh-1 mb-4">Analista Programador Web .NET</h5></span>
-            <hr>
-            <div class="row">
-                <div class='col'>
-                    <ul class="nav nav-pills d-grid flex-nowrap" id="barra">
-                        <li class="nav-item btn btn-outline-info border-0 rounded-0 px-md-0">
-                            <a href="#" class="nav-link text-white text-nowrap" onclick="clickSobremi()">Sobre mí</a>
-                        </li>
-                        <li class="nav-item btn btn-outline-info border-0 rounded-0 px-md-0">
-                            <a href="#" class="nav-link text-white" onclick="clickProyectos()">Proyectos</a>
-                        </li>
-                        <li class="nav-item btn btn-outline-info border-0 rounded-0 px-md-0">
-                            <a href="#" class="nav-link text-white" onclick="clickConocimientos()">Conocimientos</a>
-                        </li>
-                        <li class="nav-item btn btn-outline-info border-0 rounded-0 px-md-0">
-                            <a href="#" class="nav-link text-white" onclick="clickContacto()">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <hr>
-            <!-- Contenedor -->
-            <div class='row' id="contenedor">
-                <!-- Sobre mi -->
-                <div class='col text-start text-white-50 bg-dark bg-opacity-50' id="sobremi">
-                    <u><h3 class="text-white">Sobre mi</h3></u>
-                    <p>Comencé mis estudios de programacion en <a href="https://www.biosportal.com/" class="text-white" target="_blank">BIOS</a> con el curso de 3 años de Analista en Sistemas, donde en el transcurso aprendi tecnologias como C#, SQL Server, ASP.NET, LINQ, MVC, SOA, Entity Framework, Servicios WCF, y obtuve un certificado de Genexus Junior Analyst.</p>
-                    <p>Luego entre lo que adquirí en BIOS, realizé un curso en <a href="https://jovenesaprogramar.edu.uy/" class="text-white" target="_blank">Jovenes a Programar</a> del programa lanzado por Ceibal, donde adquirí conocimientos en Javascript, Bootstrap, tambien el manejo de DOM y JQuery, curso donde tambien nos enseñaron mucho sobre Competencias transversales, ayudandonos en el area tanto personal para crecer nosotros, como en lo laboral para construir nuestro futuro.</p>
-                    <p>En este momento me encuentro en la busqueda de mi primera experiencia laboral en el rubro IT.</p>
-                </div>
-                <!-- Proyectos -->
-                <div class='container' id="proyectos">
-                    <!-- Trivia BIOS-->
-                    <div class="card mb-3 bg-dark bg-opacity-50 border-white ps-0" style="max-width: 100%;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <a href="https://github.com/agusbrave52/Obligatorio-Final-Trivia" target="_blank"><img
-                                        src="./img/proyecto3.png" class="img-fluid rounded-start" alt="Card title"></a>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body text-white">
-                                    <h5 class="card-title">Trivia BIOS</h5>
-                                    <p class="card-text">Servicio web basado en un juego de trivia con manejo de usuarios,
-                                         posibilidad de crear juegos y jugarlos</p>
-                                    <p class="card-text"><small class="text-white-50">Realizado en 2023</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- BIOS Messenger -->
-                    <div class="card mb-3 bg-dark bg-opacity-50 border-white ps-0" style="max-width: 100%;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <a href="https://github.com/agusbrave52/Proyecto_BiosMessenger_2022" target="_blank"><img
-                                        src="./img/proyecto1.png" class="img-fluid rounded-start" alt="Card title"></a>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body text-white">
-                                    <h5 class="card-title">BIOS Messenger</h5>
-                                    <p class="card-text">Sistema de mensajeria entre usuarios enfocado en Back-end, con base de datos,
-                                        Entity Framework, Asp.Net y SOA</p>
-                                    <p class="card-text"><small class="text-white-50">Realizado en 2022</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Ecommerce JAP 2021-->
-                    <div class="card mb-3 bg-dark bg-opacity-50 border-white ps-0" style="max-width: 100%;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <a href="https://agusbrave52.github.io/e_commerce_jap2021" target="_blank"><img
-                                        src="./img/proyecto2.png" class="img-fluid rounded-start" alt="Card title"></a>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body text-white">
-                                    <h5 class="card-title">Ecommerce JAP 2021</h5>
-                                    <p class="card-text">Sitio web ecommerce enfocado en Front-end realizado en Jovenes a Programar 2021
-                                        haciendo uso de HTML, CSS, Javascript, JQuery, y Bootstrap</p>
-                                    <p class="card-text"><small class="text-white-50">Realizado en 2021</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Conocimientos -->
-                <div class='col text-start text-white-50 bg-dark bg-opacity-50' id="conocimientos">
-                    <u><h3 class="text-white">Conocimientos</h3></u>
-                    <ul>
-                        <li>C# - LINQ</li>
-                        <li>Asp.Net - MVC - SOA - Entity Framework - Servicios </li>
-                        <li>XML</li>
-                        <li>HTML - CSS - Bootstrap</li>
-                        <li>Javascript</li>
-                        <li>SQL Server</li>
-                        <li>Genexus</li>
-                    </ul>
-                </div>
-                <!-- Contacto -->
-                <div class='col text-start text-white-50 bg-dark bg-opacity-50' id="contacto">
-                    <u><h3 class="text-white">Contacto</h3></u>
-                    <p><a href="https://www.linkedin.com/in/agustin-fabian-bravo-bello-a53976222/" target="_blank"><i style="font-size: x-large;" class="fa fa-linkedin-square text-white btn btn-outline-dark rounded-pill"></i></a> <a href="https://www.instagram.com/urubrave52/" target="_blank"> <i style="font-size: x-large;" class="fa fa-instagram text-white btn btn-outline-dark rounded-pill"></i></a> <a href="https://github.com/agusbrave52" target="_blank"> <i style="font-size: x-large;" class="fa fa-github text-white btn btn-outline-dark rounded-pill"></i></a></p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <img src="./img/Fondo.png" alt="fondo" class="fondo">
+    <h1>Bienvenido a Mi Portfolio</h1>
+    <p>Hola, soy [Tu Nombre], un desarrollador web apasionado por crear experiencias digitales increíbles.</p>
+    <h2>Sobre Mí</h2>
+    <p>Tengo experiencia en HTML, CSS, JavaScript y frameworks modernos como React y Vue.js. Me encanta aprender nuevas tecnologías y mejorar mis habilidades constantemente.</p>
+    <h2>Proyectos Destacados</h2>
+    <ul>
+        <li><strong>Proyecto 1:</strong> Descripción breve del proyecto 1.</li>
+        <li><strong>Proyecto 2:</strong> Descripción breve del proyecto 2.</li>
+        <li><strong>Proyecto 3:</strong> Descripción breve del proyecto 3.</li>
+    </ul>
+    <h2>Contacto</h2>
+    <p>Puedes contactarme a través de mi correo electrónico: <a href="mailto:tuemail@example.com">tuemail@example.com</a></p>
 </body>
 </html>
-
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/script.js"></script>
