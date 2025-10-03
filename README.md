@@ -117,7 +117,7 @@ Visita el portfolio en: [https://agusbrave52.github.io/Portfolio/](https://agusb
 **Agustín Bravo** - Analista Programador Jr
 
 - 📧 Email: [tu-email@dominio.com](mailto:tu-email@dominio.com)
-- 💼 LinkedIn: [linkedin.com/in/tu-perfil](https://linkedin.com/in/tu-perfil)
+- 💼 LinkedIn: [linkedin.com/in/tu-perfil]([https://linkedin.com/in/tu-perfil](https://www.linkedin.com/in/agustin-fabian-bravo-bello-a53976222/))
 - 🐙 GitHub: [@agusbrave52](https://github.com/agusbrave52)
 
 ## 🙏 Agradecimientos
