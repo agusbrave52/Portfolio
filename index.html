@@ -36,6 +36,54 @@
             --bs-btn-disabled-color: var(--my-primary);
             --bs-btn-disabled-border-color: var(--my-primary);
         }
+
+        .bg-primary {
+            background-color: var(--my-primary) !important;
+        }
+
+        .bg-secondary {
+            background-color: var(--my-secondary) !important;
+        }
+
+        .bg-info {
+            background-color: var(--my-info) !important;
+        }
+
+        .bg-dark {
+            background-color: var(--my-dark) !important;
+        }
+
+        .text-primary {
+            color: var(--my-primary) !important;
+        }
+
+        .text-secondary {
+            color: var(--my-secondary) !important;
+        }
+
+        .text-info {
+            color: var(--my-info) !important;
+        }
+
+        .text-dark {
+            color: var(--my-dark) !important;
+        }
+
+        .border-primary {
+            border-color: var(--my-primary) !important;
+        }
+
+        .border-secondary {
+            border-color: var(--my-secondary) !important;
+        }
+
+        .border-info {
+            border-color: var(--my-info) !important;
+        }
+
+        .border-dark {
+            border-color: var(--my-dark) !important;
+        }
     </style>
 
 </head>
@@ -49,18 +97,20 @@
         <h3>Analista Programador Jr</h3>
     </header>
     <main>
+        <img src="./img/Fondo.png" alt="imagen de Fondo" class="imgFondo">
+        <!-- Paleta de colores -->
         <div class="botones">
             <span class="w-100">Paleta de colores</span>
             <div class="cajonPaleta">
-                <button class="marron" onclick="createColorTheme('#443627', '#F2F6D0', '#EFDCAB', '#D98324')"></button>
-                <button class="verde" onclick="createColorTheme('#B6CEB4', '#D9E9CF', '#96A78D', '#F0F0F0')"></button>
-                <button class="cyan" onclick="createColorTheme('#14FFEC', '#323232', '#0D7377', '#212121')"></button>
-                <button class="violet" onclick="createColorTheme('#8D5F8C', '#DDC3C3', '#A376A2', '#6B3F69')"></button>
-                <button class="navy" onclick="createColorTheme('#006A67', '#003161', '#000B58', '#FDEB9E')"></button>
+                <button class="marron" onclick="createColorTheme('#443627', '#F2F6D0', '#EFDCAB', '#D98324', 'marron')"></button>
+                <button class="verde" onclick="createColorTheme('#B6CEB4', '#D9E9CF', '#96A78D', '#F0F0F0', 'verde')"></button>
+                <button class="cyan" onclick="createColorTheme('#14FFEC', '#323232', '#0D7377', '#212121', 'cyan')"></button>
+                <button class="violet" onclick="createColorTheme('#8D5F8C', '#DDC3C3', '#A376A2', '#6B3F69', 'violet')"></button>
+                <button class="navy" onclick="createColorTheme('#006A67', '#003161', '#000B58', '#FDEB9E', 'navy')"></button>
                 <button class="halloween"
-                    onclick="createColorTheme('#A55B4B', '#4F1C51', '#DCA06D', '#210F37')"></button>
-                <button class="vintage" onclick="createColorTheme('#F8F3D9', '#B9B28A', '#F8F3D9', '#504B38')"></button>
-                <button class="retro" onclick="createColorTheme('#EFECEC', '#FC6736', '#FFB0B0', '#EFECEC')"></button>
+                    onclick="createColorTheme('#A55B4B', '#4F1C51', '#DCA06D', '#210F37', 'halloween')"></button>
+                <button class="vintage" onclick="createColorTheme('#F8F3D9', '#B9B28A', '#F8F3D9', '#504B38', 'vintage')"></button>
+                <button class="retro" onclick="createColorTheme('#EFECEC', '#FC6736', '#FFB0B0', '#EFECEC', 'retro')"></button>
             </div>
         </div>
         <div class="container">
@@ -89,7 +139,8 @@
                     onclick="toggleSection('contacto')">
                     Contacto
                 </a>
-                <a href="#descargar" class="btn btn-outline-primary my-2 mb-0 rounded-0 rounded-top" id="btnCV" onclick="toggleSection('descargar')">
+                <a href="#descargar" class="btn btn-outline-primary my-2 mb-0 rounded-0 rounded-top" id="btnCV"
+                    onclick="toggleSection('descargar')">
                     CV
                 </a>
                 <hr class="hr3 opacity-50 mb-0">
@@ -98,7 +149,7 @@
         <section class="d-flex flex-column align-items-center mb-5">
 
             <!-- SOBRE MI -->
-            <div class="container w-75" id="sobreMi">
+            <div class="container col-lg-7 col-md-12 col-sm-12" id="sobreMi">
                 <p>Comencé mis estudios de programacion en <a href="https://www.biosportal.com/"
                         target="_blank">BIOS</a> con el curso de 3 años de Analista en Sistemas, donde en el
                     transcurso aprendi tecnologias como C#, SQL Server, ASP.NET, LINQ, MVC, SOA, Entity Framework,
@@ -113,94 +164,99 @@
             </div>
 
             <!-- PROYECTOS -->
-            <div class='container w-75' id="proyectos">
+            <div class='container col-lg-7 col-md-12 col-sm-12' id="proyectos">
                 <!-- League of legends client -->
-                <div class="card mb-3 bg-dark bg-opacity-50 border-white ps-0" style="max-width: 100%;">
+                <div class="card mb-3 bg-info bg-opacity-50 border-primary ps-0" style="max-width: 100%;">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <a href="https://agusbrave52.github.io/League-of-legends-Client/" target="_blank"><img
                                     src="./img/proyecto4.png" class="img-fluid rounded-start" alt="Card title"></a>
                         </div>
                         <div class="col-md-8">
-                            <div class="card-body text-white">
-                                <h5 class="card-title">League of Legends Client</h5>
-                                <p class="card-text">Proyecto visual de la interfaz del cliente de League of Legends.
+                            <div class="card-body text-dark">
+                                <h5 class="card-title fs-3">League of Legends Client</h5>
+                                <p class="card-text fs-5">Proyecto visual de la interfaz del cliente de League of
+                                    Legends.
                                     Con algunas funcionalidades aplicadas con Javascript.</p>
-                                <p class="card-text"><small class="text-white-50">Realizado en 2025. En
+                                <p class="card-text fs-5"><small class="text-dark opacity-75">Realizado en 2025. En
                                         proceso...</small></p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Juego de cartas -->
-                <div class="card mb-3 bg-dark bg-opacity-50 border-white ps-0" style="max-width: 100%;">
+                <div class="card mb-3 bg-info bg-opacity-50 border-primary ps-0" style="max-width: 100%;">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <a href="https://agusbrave52.github.io/juego-cartas/" target="_blank"><img
                                     src="./img/proyecto5.png" class="img-fluid rounded-start" alt="Card title"></a>
                         </div>
                         <div class="col-md-8">
-                            <div class="card-body text-white">
-                                <h5 class="card-title">Juego de Cartas</h5>
-                                <p class="card-text">Proyecto de juego de cartas interactivo con JavaScript, Bootstrap y
+                            <div class="card-body text-dark">
+                                <h5 class="card-title fs-3">Juego de Cartas</h5>
+                                <p class="card-text fs-5">Proyecto de juego de cartas interactivo con JavaScript,
+                                    Bootstrap y
                                     React Js. Con un lector de QR para acceder a las cartas fisicas. La idea es combinar
                                     lo fisico con lo digital.</p>
-                                <p class="card-text"><small class="text-white-50">Realizado en 2025. En
+                                <p class="card-text fs-5"><small class="text-dark opacity-75">Realizado en 2025. En
                                         proceso...</small></p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Ecommerce JAP 2021-->
-                <div class="card mb-3 bg-dark bg-opacity-50 border-white ps-0" style="max-width: 100%;">
+                <div class="card mb-3 bg-info bg-opacity-50 border-primary ps-0" style="max-width: 100%;">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <a href="https://agusbrave52.github.io/e_commerce_jap2021" target="_blank"><img
                                     src="./img/proyecto2.png" class="img-fluid rounded-start" alt="Card title"></a>
                         </div>
                         <div class="col-md-8">
-                            <div class="card-body text-white">
-                                <h5 class="card-title">Ecommerce JAP 2021</h5>
-                                <p class="card-text">Sitio web ecommerce enfocado en Front-end realizado en Jovenes
+                            <div class="card-body text-dark">
+                                <h5 class="card-title fs-3">Ecommerce JAP 2021</h5>
+                                <p class="card-text fs-5">Sitio web ecommerce enfocado en Front-end realizado en Jovenes
                                     a Programar 2021
                                     haciendo uso de HTML, CSS, Javascript, JQuery, y Bootstrap</p>
-                                <p class="card-text"><small class="text-white-50">Realizado en 2021</small></p>
+                                <p class="card-text fs-5"><small class="text-dark opacity-75">Realizado en 2021</small>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Trivia BIOS-->
-                <div class="card mb-3 bg-dark bg-opacity-50 border-white ps-0" style="max-width: 100%;">
+                <div class="card mb-3 bg-info bg-opacity-50 border-primary ps-0" style="max-width: 100%;">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <a href="https://github.com/agusbrave52/Obligatorio-Final-Trivia" target="_blank"><img
                                     src="./img/proyecto3.png" class="img-fluid rounded-start" alt="Card title"></a>
                         </div>
                         <div class="col-md-8">
-                            <div class="card-body text-white">
-                                <h5 class="card-title">Trivia BIOS</h5>
-                                <p class="card-text">Servicio web basado en un juego de trivia con manejo de
+                            <div class="card-body text-dark">
+                                <h5 class="card-title fs-3">Trivia BIOS (Proyecto Backend)</h5>
+                                <p class="card-text fs-5">Servicio web basado en un juego de trivia con manejo de
                                     usuarios,
                                     posibilidad de crear juegos y jugarlos</p>
-                                <p class="card-text"><small class="text-white-50">Realizado en 2023</small></p>
+                                <p class="card-text fs-5"><small class="text-dark opacity-75">Realizado en 2023</small>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- BIOS Messenger -->
-                <div class="card mb-3 bg-dark bg-opacity-50 border-white ps-0" style="max-width: 100%;">
+                <div class="card mb-3 bg-info bg-opacity-50 border-primary ps-0" style="max-width: 100%;">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <a href="https://github.com/agusbrave52/Proyecto_BiosMessenger_2022" target="_blank"><img
                                     src="./img/proyecto1.png" class="img-fluid rounded-start" alt="Card title"></a>
                         </div>
                         <div class="col-md-8">
-                            <div class="card-body text-white">
-                                <h5 class="card-title">BIOS Messenger</h5>
-                                <p class="card-text">Sistema de mensajeria entre usuarios enfocado en Back-end, con
+                            <div class="card-body text-dark">
+                                <h5 class="card-title fs-3">BIOS Messenger (Proyecto Backend)</h5>
+                                <p class="card-text fs-5">Sistema de mensajeria entre usuarios enfocado en Back-end, con
                                     base de datos,
                                     Entity Framework, Asp.Net y SOA</p>
-                                <p class="card-text"><small class="text-white-50">Realizado en 2022</small></p>
+                                <p class="card-text fs-5"><small class="text-dark opacity-75">Realizado en 2022</small>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -208,11 +264,12 @@
             </div>
 
             <!-- Habilidades -->
-            <div class='w-75 text-dark-50 bg-info bg-opacity-50' id="habilidades">
+            <div class='container col-lg-4 col-md-8 col-sm-12 border border-primary bg-info bg-opacity-50 flex-column align-items-center'
+                id="habilidades">
                 <u>
-                    <h3 class="text-primary">Habilidades</h3>
+                    <h3 class="text-secondary">Habilidades</h3>
                 </u>
-                <ul class="text-primary">
+                <ul class="text-dark">
                     <li>C# - LINQ</li>
                     <li>Asp.Net - MVC - SOA - Entity Framework - Servicios </li>
                     <li>XML</li>
@@ -225,27 +282,30 @@
             </div>
 
             <!-- Contacto -->
-            <div class='w-25 text-primary-50 bg-info bg-opacity-50 text-center' id="contacto">
+            <div class='container col-lg-2 col-md-4 col-sm-12 text-primary border border-primary bg-info bg-opacity-50 text-center'
+                id="contacto">
                 <u>
-                    <h3 class="text-primary">Contacto</h3>
+                    <h3 class="text-secondary">Contacto</h3>
                 </u>
                 <p><a href="https://www.linkedin.com/in/agustin-fabian-bravo-bello-a53976222/" target="_blank"
                         id="linkLinkedIn"><i style="font-size: x-large;"
-                            class="fa fa-linkedin-square text-primary btn btn-outline-primary rounded-pill"></i></a> <a
-                        href="https://www.instagram.com/urubrave52/" target="_blank" id="linkInstagram"> <i
+                            class="fa fa-linkedin-square text-secondary btn btn-outline-primary rounded-pill"></i></a>
+                    <a href="https://www.instagram.com/urubrave52/" target="_blank" id="linkInstagram"> <i
                             style="font-size: x-large;"
-                            class="fa fa-instagram text-primary btn btn-outline-primary rounded-pill"></i></a> <a
+                            class="fa fa-instagram text-secondary btn btn-outline-primary rounded-pill"></i></a> <a
                         href="https://github.com/agusbrave52" target="_blank" id="linkGitHub"> <i
                             style="font-size: x-large;"
-                            class="fa fa-github text-primary btn btn-outline-primary rounded-pill"></i></a></p>
+                            class="fa fa-github text-secondary btn btn-outline-primary rounded-pill"></i></a></p>
             </div>
 
             <!-- Descargar CV -->
-            <div class='w-25 text-primary-50 bg-info bg-opacity-50 text-center' id="descargar">
+            <div class='container col-lg-2 col-md-4 col-sm-12 text-primary bg-info bg-opacity-50 text-center border border-primary'
+                id="descargar">
                 <u>
-                    <h3 class="text-primary">Descargar CV</h3>
+                    <h3 class="text-secondary">Descargar CV</h3>
                 </u>
-                <p><a href="./img/CV AFBB (Programacion).pdf" target="_blank" class="btn btn-outline-primary">Descargar</a></p>
+                <p><a href="./img/CV AFBB (Programacion).pdf" target="_blank"
+                        class="btn btn-outline-primary">Descargar</a></p>
             </div>
 
         </section>

@@ -16,12 +16,57 @@ $dark: #212121;
 }
 
 body {
-    background-image: url('../img/Fondo.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     min-height: 100vh;
+}
+
+.imgFondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+    &.marron {
+        filter: hue-rotate(140deg) sepia(0.3) saturate(0.8) brightness(1); //marron
+        transition: filter 0.5s ease;
+    }
+
+    &.verde {
+        filter: hue-rotate(235deg) sepia(0) saturate(0.5) brightness(1.4); //verde
+        transition: filter 0.5s ease;
+    }
+
+    &.vintage {
+        filter: hue-rotate(170deg) sepia(0.4) saturate(1) brightness(1.2); //vintage
+        transition: filter 0.5s ease;
+    }
+
+    &.cyan {
+        filter: hue-rotate(320deg) sepia(0) saturate(0.8) brightness(1.6); //cyan
+        transition: filter 0.5s ease;
+    }
+
+    &.navy {
+        filter:hue-rotate(0deg) sepia(0) saturate(1.4) brightness(1.3); //navy
+        transition: filter 0.5s ease;
+    }
+
+    &.violet {
+        filter: hue-rotate(30deg) sepia(0) saturate(1) brightness(1.2); //violet
+        transition: filter 0.5s ease;
+    }
+
+    &.halloween {
+        filter: hue-rotate(150deg) sepia(0) saturate(1.2) brightness(1.2); //halloween
+        transition: filter 0.5s ease;
+    }
+
+    &.retro {
+        filter: hue-rotate(110deg) sepia(0) saturate(0.6) brightness(1.4); //retro
+        transition: filter 0.5s ease;
+    }
 }
 
 .hr1 {
@@ -74,6 +119,8 @@ main {
     color: var(--my-dark);
     text-align: justify;
     box-shadow: 0 0 10px var(--my-info);
+    animation: bounceInUp 0.6s;
+
     a {
         color: var(--my-secondary);
     }
@@ -109,21 +156,60 @@ main {
 
         button {
             border: none;
-            width: 20px;
-            height: 20px;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        position: absolute;
+        display: none;
+        top: 10px;
+        right: 60px;
+        width: 160px;
+        height: 142px;
+        border: 2px solid #252c31;
+        flex-wrap: wrap;
+
+        span {
+            height: 18px;
+            text-align: center;
+            line-height: 18px;
+            color: white;
+            font-size: 18px;
+            background-color: #6c7881;
+        }
+
+        .cajonPaleta {
+            background-color: #000102;
+            width: 100%;
+            height: calc(100% - 18px);
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: start;
+
+            button {
+                border: none;
+                width: 40px;
+                height: 40px;
+            }
         }
     }
 }
 
-#proyectos{
+#proyectos {
     display: none;
     border-radius: 10px;
     margin-top: 20px;
     padding: 0px;
-    .card{
+    animation: bounceInUp 0.6s;
+
+    .card {
         box-shadow: 0 0 10px var(--my-info);
     }
 }
+
 #habilidades {
     display: none;
     border-radius: 10px;
@@ -132,6 +218,17 @@ main {
     color: var(--my-dark);
     text-align: justify;
     box-shadow: 0 0 10px var(--my-info);
+    animation: bounceInUp 0.6s;
+
+    ul {
+        li {
+            list-style: square;
+
+            &::marker {
+                color: var(--my-secondary);
+            }
+        }
+    }
 }
 
 #contacto {
@@ -142,9 +239,10 @@ main {
     color: var(--my-dark);
     text-align: justify;
     box-shadow: 0 0 10px var(--my-info);
-};
+    animation: bounceInUp 0.6s;
+}
 
-#descargar{
+#descargar {
     display: none;
     border-radius: 10px;
     margin-top: 20px;
@@ -152,6 +250,7 @@ main {
     color: var(--my-dark);
     text-align: justify;
     box-shadow: 0 0 10px var(--my-info);
+    animation: bounceInUp 0.6s;
 }
 
 #btnColorPicker {
@@ -201,17 +300,37 @@ main {
 }
 
 #info-mouse {
-  position: fixed;
-  display: none;
-  pointer-events: none;
-  background: var(--my-info);
-  color: var(--my-dark);
-  border: 2px solid var(--my-primary);
-  border-radius: 8px;
-  padding: 2px 6px;
-  font-size: 1rem;
-  font-style: normal;
-  z-index: 999;
-  box-shadow: 0 4px 16px #000a;
-  transition: opacity 0.15s;
+    position: fixed;
+    display: none;
+    pointer-events: none;
+    background: var(--my-info);
+    color: var(--my-dark);
+    border: 2px solid var(--my-primary);
+    border-radius: 8px;
+    padding: 2px 6px;
+    font-size: 1rem;
+    font-style: normal;
+    z-index: 999;
+    box-shadow: 0 4px 16px #000a;
+    transition: opacity 0.15s;
+}
+
+@keyframes bounceInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.8);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(10px) scale(1.05);
+    }
+
+    80% {
+        transform: translateY(-5px) scale(0.98);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
 }

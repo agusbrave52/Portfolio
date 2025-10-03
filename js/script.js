@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function toggleSection(sectionId) {
-    // Lista de todas las secciones que quieres controlar
+    // Lista de todas las secciones
     const allSectionIds = ['sobreMi', 'proyectos', 'habilidades', 'contacto', 'descargar'];
-    
-    // Primero cerrar todas las demás secciones
+
+    // cerrar las demás secciones
     allSectionIds.forEach(id => {
         if (id !== sectionId) {
             const otherSection = document.querySelector(`#${id}`);
@@ -15,31 +15,35 @@ function toggleSection(sectionId) {
             }
         }
     });
-    
-    // Luego mostrar/ocultar la sección seleccionada
+
+    // mostrar/ocultar la sección seleccionada
     const section = document.querySelector(`#${sectionId}`);
-    if (section) {
-        if (section.style.display === "block") {
-            section.style.display = "none";
-        } else {
-            section.style.display = "block";
-        }
+    if (section === 'habilidades') {
+        section.style.display = section.style.display === "flex" ? "none" : "flex";
+    }
+    else{
+        section.style.display = section.style.display === "block" ? "none" : "block";
     }
 };
 
 function addDynamicCSS(css) {
-    // Crear elemento <style>
+    // Eliminar todos los estilos dinámicos anteriores
+    const existingDynamicStyles = document.querySelectorAll('style[data-dynamic="true"]');
+    existingDynamicStyles.forEach(style => style.remove());
+    
+    // Crear nuevo elemento <style> 
     const style = document.createElement('style');
+    style.setAttribute('data-dynamic', 'true'); // Marca para identificar estilos dinámicos
     style.textContent = css;
 
     // Agregar al <head>
     document.head.appendChild(style);
 
-    console.log('CSS agregado dinámicamente');
+    console.log('CSS agregado dinámicamente (anteriores eliminados)');
 };
 
 /* botones  | <a> | fondo de texto | texto*/
-function createColorTheme(primary, secondary, info, dark) {
+function createColorTheme(primary, secondary, info, dark, nameTheme) {
     const themeCSS = `
         :root {
             --my-primary: ${primary};
@@ -64,11 +68,31 @@ function createColorTheme(primary, secondary, info, dark) {
             --bs-btn-disabled-color: var(--my-primary);
             --bs-btn-disabled-border-color: var(--my-primary);
         }
+        .bg-primary {background-color: var(--my-primary) !important;}
+        .bg-secondary {background-color: var(--my-secondary) !important;}
+        .bg-info {background-color: var(--my-info) !important;}
+        .bg-dark {background-color: var(--my-dark) !important;}
+
+        .text-primary {color: var(--my-primary) !important;}
+        .text-secondary {color: var(--my-secondary) !important;}
+        .text-info {color: var(--my-info) !important;}
+        .text-dark {color: var(--my-dark) !important;}
+
+        .border-primary {border-color: var(--my-primary) !important;}
+        .border-secondary {border-color: var(--my-secondary) !important;}
+        .border-info {border-color: var(--my-info) !important;}
+        .border-dark {border-color: var(--my-dark) !important;}
     `;
+    // Cambiar la clase del fondo
+    const imagenFondo = document.querySelector('.imgFondo');
+    imagenFondo.classList.remove('marron', 'verde', 'cyan', 'violet', 'navy', 'halloween', 'vintage', 'retro');
+    imagenFondo.classList.add(nameTheme);
+    // Aplicar el nuevo tema
     addDynamicCSS(themeCSS);
 };
 
 function toggleColorPalette() {
+    // Mostrar u ocultar la paleta de colores
     const palette = document.querySelector('.botones');
     if (palette.style.display === "flex") {
         palette.style.display = "none";
