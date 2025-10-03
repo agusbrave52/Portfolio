@@ -1,0 +1,217 @@
+$primary: #14FFEC;
+$info: #0D7377;
+$secondary: #323232;
+$dark: #212121;
+
+
+@use "sass:color";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Lexend", sans-serif;
+}
+
+body {
+    background-image: url('../img/Fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.hr1 {
+    width: 200px;
+    border-top: 3px solid var(--my-primary);
+    box-shadow: 0 15px 15px var(--my-primary);
+    border-radius: 50%;
+}
+
+.hr2 {
+    border-top: 3px solid var(--my-primary);
+    box-shadow: 0px -5px 10px var(--my-primary);
+}
+
+.hr3 {
+    border-top: 3px solid var(--my-primary);
+    box-shadow: 0px 5px 10px var(--my-primary);
+}
+
+.fotoPerfil {
+    position: relative;
+    width: 90px;
+    margin-bottom: 10px;
+}
+
+main {
+    div {
+        div {
+            .btn:hover {
+                animation: brillo-top 0.5s infinite alternate;
+            }
+
+            @keyframes brillo-top {
+                0% {}
+
+                100% {
+                    box-shadow: 0px 0px 15px var(--my-primary);
+                }
+            }
+        }
+    }
+}
+
+#sobreMi {
+    display: none;
+    background-color: var(--my-info);
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px;
+    color: var(--my-dark);
+    text-align: justify;
+    box-shadow: 0 0 10px var(--my-info);
+    a {
+        color: var(--my-secondary);
+    }
+}
+
+.botones {
+    position: absolute;
+    display: none;
+    top: 10px;
+    right: 60px;
+    width: 160px;
+    height: 102px;
+    border: 2px solid #252c31;
+    flex-wrap: wrap;
+
+    span {
+        height: 18px;
+        text-align: center;
+        line-height: 18px;
+        color: white;
+        font-size: 18px;
+        background-color: #6c7881;
+    }
+
+    .cajonPaleta {
+        background-color: #000102;
+        width: 100%;
+        height: calc(100% - 18px);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: start;
+
+        button {
+            border: none;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+#proyectos{
+    display: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 0px;
+    .card{
+        box-shadow: 0 0 10px var(--my-info);
+    }
+}
+#habilidades {
+    display: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px;
+    color: var(--my-dark);
+    text-align: justify;
+    box-shadow: 0 0 10px var(--my-info);
+}
+
+#contacto {
+    display: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px;
+    color: var(--my-dark);
+    text-align: justify;
+    box-shadow: 0 0 10px var(--my-info);
+};
+
+#descargar{
+    display: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px;
+    color: var(--my-dark);
+    text-align: justify;
+    box-shadow: 0 0 10px var(--my-info);
+}
+
+#btnColorPicker {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 20px;
+    right: 20px;
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
+
+.marron {
+    background-color: #603F26;
+}
+
+.verde {
+    background-color: #96A78D;
+}
+
+.cyan {
+    background-color: #0D7377;
+}
+
+.violet {
+    background-color: #A376A2;
+}
+
+.navy {
+    background-color: #003161;
+}
+
+.halloween {
+    background-color: #A55B4B;
+}
+
+.vintage {
+    background-color: #EBE5C2;
+}
+
+.retro {
+    background-color: #FFB0B0;
+}
+
+#info-mouse {
+  position: fixed;
+  display: none;
+  pointer-events: none;
+  background: var(--my-info);
+  color: var(--my-dark);
+  border: 2px solid var(--my-primary);
+  border-radius: 8px;
+  padding: 2px 6px;
+  font-size: 1rem;
+  font-style: normal;
+  z-index: 999;
+  box-shadow: 0 4px 16px #000a;
+  transition: opacity 0.15s;
+}

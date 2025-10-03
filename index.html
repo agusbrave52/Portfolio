@@ -5,22 +5,256 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
     <title>Mi Portfolio</title>
+
+    <style>
+        :root {
+            --my-primary: #14FFEC;
+            --my-secondary: #323232;
+            --my-info: #0D7377;
+            --my-dark: #212121;
+            --bs-primary: var(--my-primary);
+            --bs-info: var(--my-info);
+            --bs-secondary: var(--my-secondary);
+            --bs-dark: var(--my-dark);
+        }
+
+        .btn-outline-primary {
+            --bs-btn-color: var(--my-primary);
+            --bs-btn-border-color: var(--my-primary);
+            --bs-btn-hover-color: #000;
+            --bs-btn-hover-bg: var(--my-primary);
+            --bs-btn-hover-border-color: var(--my-primary);
+            --bs-btn-active-color: #000;
+            --bs-btn-active-bg: var(--my-primary);
+            --bs-btn-active-border-color: var(--my-primary);
+            --bs-btn-disabled-color: var(--my-primary);
+            --bs-btn-disabled-border-color: var(--my-primary);
+        }
+    </style>
+
 </head>
+
 <body>
-    <img src="./img/Fondo.png" alt="fondo" class="fondo">
-    <h1>Bienvenido a Mi Portfolio</h1>
-    <p>Hola, soy [Tu Nombre], un desarrollador web apasionado por crear experiencias digitales increíbles.</p>
-    <h2>Sobre Mí</h2>
-    <p>Tengo experiencia en HTML, CSS, JavaScript y frameworks modernos como React y Vue.js. Me encanta aprender nuevas tecnologías y mejorar mis habilidades constantemente.</p>
-    <h2>Proyectos Destacados</h2>
-    <ul>
-        <li><strong>Proyecto 1:</strong> Descripción breve del proyecto 1.</li>
-        <li><strong>Proyecto 2:</strong> Descripción breve del proyecto 2.</li>
-        <li><strong>Proyecto 3:</strong> Descripción breve del proyecto 3.</li>
-    </ul>
-    <h2>Contacto</h2>
-    <p>Puedes contactarme a través de mi correo electrónico: <a href="mailto:tuemail@example.com">tuemail@example.com</a></p>
+    <header class="text-center mt-5 text-white">
+        <img src="./img/fotoPerfil.jpg" alt="Foto de perfil" class="fotoPerfil">
+        <h1>Portfolio</h1>
+        <hr class="mx-auto opacity-50 hr1">
+        <h2>Agustin Bravo</h2>
+        <h3>Analista Programador Jr</h3>
+    </header>
+    <main>
+        <div class="botones">
+            <span class="w-100">Paleta de colores</span>
+            <div class="cajonPaleta">
+                <button class="marron" onclick="createColorTheme('#443627', '#F2F6D0', '#EFDCAB', '#D98324')"></button>
+                <button class="verde" onclick="createColorTheme('#B6CEB4', '#D9E9CF', '#96A78D', '#F0F0F0')"></button>
+                <button class="cyan" onclick="createColorTheme('#14FFEC', '#323232', '#0D7377', '#212121')"></button>
+                <button class="violet" onclick="createColorTheme('#8D5F8C', '#DDC3C3', '#A376A2', '#6B3F69')"></button>
+                <button class="navy" onclick="createColorTheme('#006A67', '#003161', '#000B58', '#FDEB9E')"></button>
+                <button class="halloween"
+                    onclick="createColorTheme('#A55B4B', '#4F1C51', '#DCA06D', '#210F37')"></button>
+                <button class="vintage" onclick="createColorTheme('#F8F3D9', '#B9B28A', '#F8F3D9', '#504B38')"></button>
+                <button class="retro" onclick="createColorTheme('#EFECEC', '#FC6736', '#FFB0B0', '#EFECEC')"></button>
+            </div>
+        </div>
+        <div class="container">
+            <!-- Botón para abrir la paleta de colores -->
+            <button class="btn btn-outline-primary my-2" id="btnColorPicker" onclick="toggleColorPalette()">
+                🎨
+            </button>
+            <div class="row w-75 mx-auto">
+                <hr class="hr2 opacity-50 mb-0 mt-3">
+
+                <!-- Botones de navegación -->
+
+                <a href="#sobreMi" class="btn btn-outline-primary my-2 mt-0 rounded-0 rounded-bottom" id="btnSobreMi"
+                    onclick="toggleSection('sobreMi')">
+                    Sobre mi
+                </a>
+                <a href="#proyectos" class="btn btn-outline-primary my-2" id="btnProyectos"
+                    onclick="toggleSection('proyectos')">
+                    Proyectos
+                </a>
+                <a href="#habilidades" class="btn btn-outline-primary my-2" id="btnHabilidades"
+                    onclick="toggleSection('habilidades')">
+                    Habilidades
+                </a>
+                <a href="#contacto" class="btn btn-outline-primary my-2" id="btnContacto"
+                    onclick="toggleSection('contacto')">
+                    Contacto
+                </a>
+                <a href="#descargar" class="btn btn-outline-primary my-2 mb-0 rounded-0 rounded-top" id="btnCV" onclick="toggleSection('descargar')">
+                    CV
+                </a>
+                <hr class="hr3 opacity-50 mb-0">
+            </div>
+        </div>
+        <section class="d-flex flex-column align-items-center mb-5">
+
+            <!-- SOBRE MI -->
+            <div class="container w-75" id="sobreMi">
+                <p>Comencé mis estudios de programacion en <a href="https://www.biosportal.com/"
+                        target="_blank">BIOS</a> con el curso de 3 años de Analista en Sistemas, donde en el
+                    transcurso aprendi tecnologias como C#, SQL Server, ASP.NET, LINQ, MVC, SOA, Entity Framework,
+                    Servicios WCF, y obtuve un certificado de Genexus Junior Analyst.</p>
+                <p>Luego entre lo que adquirí en BIOS, realizé un curso en <a href="https://jovenesaprogramar.edu.uy/"
+                        target="_blank">Jovenes a
+                        Programar</a> del programa lanzado por Ceibal, donde adquirí conocimientos en Javascript,
+                    Bootstrap, tambien el manejo de DOM y JQuery, curso donde tambien nos enseñaron mucho sobre
+                    Competencias transversales, ayudandonos en el area tanto personal para crecer nosotros, como en
+                    lo laboral para construir nuestro futuro.</p>
+                <p>En este momento me encuentro en la busqueda de mi primera experiencia laboral en el rubro IT.</p>
+            </div>
+
+            <!-- PROYECTOS -->
+            <div class='container w-75' id="proyectos">
+                <!-- League of legends client -->
+                <div class="card mb-3 bg-dark bg-opacity-50 border-white ps-0" style="max-width: 100%;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="https://agusbrave52.github.io/League-of-legends-Client/" target="_blank"><img
+                                    src="./img/proyecto4.png" class="img-fluid rounded-start" alt="Card title"></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body text-white">
+                                <h5 class="card-title">League of Legends Client</h5>
+                                <p class="card-text">Proyecto visual de la interfaz del cliente de League of Legends.
+                                    Con algunas funcionalidades aplicadas con Javascript.</p>
+                                <p class="card-text"><small class="text-white-50">Realizado en 2025. En
+                                        proceso...</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Juego de cartas -->
+                <div class="card mb-3 bg-dark bg-opacity-50 border-white ps-0" style="max-width: 100%;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="https://agusbrave52.github.io/juego-cartas/" target="_blank"><img
+                                    src="./img/proyecto5.png" class="img-fluid rounded-start" alt="Card title"></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body text-white">
+                                <h5 class="card-title">Juego de Cartas</h5>
+                                <p class="card-text">Proyecto de juego de cartas interactivo con JavaScript, Bootstrap y
+                                    React Js. Con un lector de QR para acceder a las cartas fisicas. La idea es combinar
+                                    lo fisico con lo digital.</p>
+                                <p class="card-text"><small class="text-white-50">Realizado en 2025. En
+                                        proceso...</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ecommerce JAP 2021-->
+                <div class="card mb-3 bg-dark bg-opacity-50 border-white ps-0" style="max-width: 100%;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="https://agusbrave52.github.io/e_commerce_jap2021" target="_blank"><img
+                                    src="./img/proyecto2.png" class="img-fluid rounded-start" alt="Card title"></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body text-white">
+                                <h5 class="card-title">Ecommerce JAP 2021</h5>
+                                <p class="card-text">Sitio web ecommerce enfocado en Front-end realizado en Jovenes
+                                    a Programar 2021
+                                    haciendo uso de HTML, CSS, Javascript, JQuery, y Bootstrap</p>
+                                <p class="card-text"><small class="text-white-50">Realizado en 2021</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Trivia BIOS-->
+                <div class="card mb-3 bg-dark bg-opacity-50 border-white ps-0" style="max-width: 100%;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="https://github.com/agusbrave52/Obligatorio-Final-Trivia" target="_blank"><img
+                                    src="./img/proyecto3.png" class="img-fluid rounded-start" alt="Card title"></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body text-white">
+                                <h5 class="card-title">Trivia BIOS</h5>
+                                <p class="card-text">Servicio web basado en un juego de trivia con manejo de
+                                    usuarios,
+                                    posibilidad de crear juegos y jugarlos</p>
+                                <p class="card-text"><small class="text-white-50">Realizado en 2023</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- BIOS Messenger -->
+                <div class="card mb-3 bg-dark bg-opacity-50 border-white ps-0" style="max-width: 100%;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="https://github.com/agusbrave52/Proyecto_BiosMessenger_2022" target="_blank"><img
+                                    src="./img/proyecto1.png" class="img-fluid rounded-start" alt="Card title"></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body text-white">
+                                <h5 class="card-title">BIOS Messenger</h5>
+                                <p class="card-text">Sistema de mensajeria entre usuarios enfocado en Back-end, con
+                                    base de datos,
+                                    Entity Framework, Asp.Net y SOA</p>
+                                <p class="card-text"><small class="text-white-50">Realizado en 2022</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Habilidades -->
+            <div class='w-75 text-dark-50 bg-info bg-opacity-50' id="habilidades">
+                <u>
+                    <h3 class="text-primary">Habilidades</h3>
+                </u>
+                <ul class="text-primary">
+                    <li>C# - LINQ</li>
+                    <li>Asp.Net - MVC - SOA - Entity Framework - Servicios </li>
+                    <li>XML</li>
+                    <li>HTML - CSS - Bootstrap - Sass</li>
+                    <li>Javascript</li>
+                    <li>React Js</li>
+                    <li>SQL Server</li>
+                    <li>Genexus</li>
+                </ul>
+            </div>
+
+            <!-- Contacto -->
+            <div class='w-25 text-primary-50 bg-info bg-opacity-50 text-center' id="contacto">
+                <u>
+                    <h3 class="text-primary">Contacto</h3>
+                </u>
+                <p><a href="https://www.linkedin.com/in/agustin-fabian-bravo-bello-a53976222/" target="_blank"
+                        id="linkLinkedIn"><i style="font-size: x-large;"
+                            class="fa fa-linkedin-square text-primary btn btn-outline-primary rounded-pill"></i></a> <a
+                        href="https://www.instagram.com/urubrave52/" target="_blank" id="linkInstagram"> <i
+                            style="font-size: x-large;"
+                            class="fa fa-instagram text-primary btn btn-outline-primary rounded-pill"></i></a> <a
+                        href="https://github.com/agusbrave52" target="_blank" id="linkGitHub"> <i
+                            style="font-size: x-large;"
+                            class="fa fa-github text-primary btn btn-outline-primary rounded-pill"></i></a></p>
+            </div>
+
+            <!-- Descargar CV -->
+            <div class='w-25 text-primary-50 bg-info bg-opacity-50 text-center' id="descargar">
+                <u>
+                    <h3 class="text-primary">Descargar CV</h3>
+                </u>
+                <p><a href="./img/CV AFBB (Programacion).pdf" target="_blank" class="btn btn-outline-primary">Descargar</a></p>
+            </div>
+
+        </section>
+    </main>
+    <!-- Tooltip de información para el mouse -->
+    <i id="info-mouse"></i>
+
+    <script src="https://kit.fontawesome.com/dff6b72452.js" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
 </body>
+
 </html>
