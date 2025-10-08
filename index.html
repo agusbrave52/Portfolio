@@ -24,73 +24,46 @@
             --bs-dark: var(--my-dark);
         }
 
-        .btn-outline-primary {
-            --bs-btn-color: var(--my-primary);
-            --bs-btn-border-color: var(--my-primary);
-            --bs-btn-hover-color: #000;
-            --bs-btn-hover-bg: var(--my-primary);
-            --bs-btn-hover-border-color: var(--my-primary);
-            --bs-btn-active-color: #000;
-            --bs-btn-active-bg: var(--my-primary);
-            --bs-btn-active-border-color: var(--my-primary);
-            --bs-btn-disabled-color: var(--my-primary);
-            --bs-btn-disabled-border-color: var(--my-primary);
-        }
+        .btn-outline-primary {--bs-btn-color: var(--my-primary);--bs-btn-border-color: var(--my-primary);--bs-btn-hover-color: #000;--bs-btn-hover-bg: var(--my-primary);--bs-btn-hover-border-color: var(--my-primary);--bs-btn-active-color: #000;--bs-btn-active-bg: var(--my-primary);--bs-btn-active-border-color: var(--my-primary);--bs-btn-disabled-color: var(--my-primary);--bs-btn-disabled-border-color: var(--my-primary);}
+        .btn-outline-secondary {--bs-btn-color: var(--my-secondary);--bs-btn-border-color: var(--my-secondary);--bs-btn-hover-color: #000;--bs-btn-hover-bg: var(--my-secondary);--bs-btn-hover-border-color: var(--my-secondary);--bs-btn-active-color: #000;--bs-btn-active-bg: var(--my-secondary);--bs-btn-active-border-color: var(--my-secondary);--bs-btn-disabled-color: var(--my-secondary);--bs-btn-disabled-border-color: var(--my-secondary);}
+        .btn-outline-info {--bs-btn-color: var(--my-info);--bs-btn-border-color: var(--my-info);--bs-btn-hover-color: #000;--bs-btn-hover-bg: var(--my-info);--bs-btn-hover-border-color: var(--my-info);--bs-btn-active-color: #000;--bs-btn-active-bg: var(--my-info);--bs-btn-active-border-color: var(--my-info);--bs-btn-disabled-color: var(--my-info);--bs-btn-disabled-border-color: var(--my-info);}
+        .btn-outline-dark {--bs-btn-color: var(--my-dark);--bs-btn-border-color: var(--my-dark);--bs-btn-hover-color: #000;--bs-btn-hover-bg: var(--my-dark);--bs-btn-hover-border-color: var(--my-dark);--bs-btn-active-color: #000;--bs-btn-active-bg: var(--my-dark);--bs-btn-active-border-color: var(--my-dark);--bs-btn-disabled-color: var(--my-dark);--bs-btn-disabled-border-color: var(--my-dark);}
+        
+        .bg-primary {background-color: var(--my-primary) !important;}
+        .bg-secondary {background-color: var(--my-secondary) !important;}
+        .bg-info {background-color: var(--my-info) !important;}
+        .bg-dark {background-color: var(--my-dark) !important;}
 
-        .bg-primary {
-            background-color: var(--my-primary) !important;
-        }
+        .text-primary {color: var(--my-primary) !important;}
+        .text-secondary {color: var(--my-secondary) !important;}
+        .text-info {color: var(--my-info) !important;}
+        .text-dark {color: var(--my-dark) !important;}
 
-        .bg-secondary {
-            background-color: var(--my-secondary) !important;
-        }
-
-        .bg-info {
-            background-color: var(--my-info) !important;
-        }
-
-        .bg-dark {
-            background-color: var(--my-dark) !important;
-        }
-
-        .text-primary {
-            color: var(--my-primary) !important;
-        }
-
-        .text-secondary {
-            color: var(--my-secondary) !important;
-        }
-
-        .text-info {
-            color: var(--my-info) !important;
-        }
-
-        .text-dark {
-            color: var(--my-dark) !important;
-        }
-
-        .border-primary {
-            border-color: var(--my-primary) !important;
-        }
-
-        .border-secondary {
-            border-color: var(--my-secondary) !important;
-        }
-
-        .border-info {
-            border-color: var(--my-info) !important;
-        }
-
-        .border-dark {
-            border-color: var(--my-dark) !important;
-        }
+        .border-primary {border-color: var(--my-primary) !important;}
+        .border-secondary {border-color: var(--my-secondary) !important;}
+        .border-info {border-color: var(--my-info) !important;}
+        .border-dark {border-color: var(--my-dark) !important;}
     </style>
-
 </head>
 
 <body>
     <header class="text-center mt-5 text-white">
-        <img src="./img/fotoPerfil.jpg" alt="Foto de perfil" class="fotoPerfil">
+        <svg viewBox="0 0 16 16" class="imgPerfil" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+                <path class="colorImgPerfil"
+                    d="M8.01005 0.858582L6.01005 14.8586L7.98995 15.1414L9.98995 1.14142L8.01005 0.858582Z"
+                    fill="#000000"></path>
+                <path class="colorImgPerfil"
+                    d="M12.5 11.5L11.0858 10.0858L13.1716 8L11.0858 5.91422L12.5 4.5L16 8L12.5 11.5Z" fill="#000000">
+                </path>
+                <path class="colorImgPerfil"
+                    d="M2.82843 8L4.91421 10.0858L3.5 11.5L0 8L3.5 4.5L4.91421 5.91422L2.82843 8Z" fill="#000000">
+                </path>
+            </g>
+        </svg>
+
         <h1>Portfolio</h1>
         <hr class="mx-auto opacity-50 hr1">
         <h2>Agustin Bravo</h2>
@@ -102,15 +75,22 @@
         <div class="botones">
             <span class="w-100">Paleta de colores</span>
             <div class="cajonPaleta">
-                <button class="marron" onclick="createColorTheme('#443627', '#F2F6D0', '#EFDCAB', '#D98324', 'marron')"></button>
-                <button class="verde" onclick="createColorTheme('#B6CEB4', '#D9E9CF', '#96A78D', '#F0F0F0', 'verde')"></button>
-                <button class="cyan" onclick="createColorTheme('#14FFEC', '#323232', '#0D7377', '#212121', 'cyan')"></button>
-                <button class="violet" onclick="createColorTheme('#8D5F8C', '#DDC3C3', '#A376A2', '#6B3F69', 'violet')"></button>
-                <button class="navy" onclick="createColorTheme('#006A67', '#003161', '#000B58', '#FDEB9E', 'navy')"></button>
+                <button class="marron"
+                    onclick="createColorTheme('#443627', '#F2F6D0', '#EFDCAB', '#D98324', 'marron')"></button>
+                <button class="verde"
+                    onclick="createColorTheme('#B6CEB4', '#D9E9CF', '#96A78D', '#F0F0F0', 'verde')"></button>
+                <button class="cyan"
+                    onclick="createColorTheme('#14FFEC', '#323232', '#0D7377', '#212121', 'cyan')"></button>
+                <button class="violet"
+                    onclick="createColorTheme('#8D5F8C', '#DDC3C3', '#A376A2', '#6B3F69', 'violet')"></button>
+                <button class="navy"
+                    onclick="createColorTheme('#006A67', '#003161', '#000B58', '#FDEB9E', 'navy')"></button>
                 <button class="halloween"
                     onclick="createColorTheme('#A55B4B', '#4F1C51', '#DCA06D', '#210F37', 'halloween')"></button>
-                <button class="vintage" onclick="createColorTheme('#F8F3D9', '#B9B28A', '#F8F3D9', '#504B38', 'vintage')"></button>
-                <button class="retro" onclick="createColorTheme('#EFECEC', '#FC6736', '#FFB0B0', '#EFECEC', 'retro')"></button>
+                <button class="vintage"
+                    onclick="createColorTheme('#F8F3D9', '#B9B28A', '#F8F3D9', '#504B38', 'vintage')"></button>
+                <button class="retro"
+                    onclick="createColorTheme('#EFECEC', '#FC6736', '#FFB0B0', '#EFECEC', 'retro')"></button>
             </div>
         </div>
         <div class="container">
@@ -150,19 +130,26 @@
 
             <!-- SOBRE MI -->
             <div class="container col-lg-7 col-md-12 col-sm-12" id="sobreMi">
-                <p>Comencé mis estudios de programacion en <a href="https://www.biosportal.com/"
-                        target="_blank">BIOS</a> con el curso de 3 años de Analista en Sistemas, donde en el
-                    transcurso aprendi tecnologias como C#, SQL Server, ASP.NET, LINQ, MVC, SOA, Entity Framework,
-                    Servicios WCF, y obtuve un certificado de Genexus Junior Analyst.</p>
-                <p>Luego entre lo que adquirí en BIOS, realizé un curso en <a href="https://jovenesaprogramar.edu.uy/"
-                        target="_blank">Jovenes a
-                        Programar</a> del programa lanzado por Ceibal, donde adquirí conocimientos en Javascript,
-                    Bootstrap, tambien el manejo de DOM y JQuery, curso donde tambien nos enseñaron mucho sobre
-                    Competencias transversales, ayudandonos en el area tanto personal para crecer nosotros, como en
-                    lo laboral para construir nuestro futuro.</p>
-                <p>En este momento me encuentro en la busqueda de mi primera experiencia laboral en el rubro IT.</p>
-            </div>
+                <div class="container-sobreMi">
+                    <img src="./img/fotoPerfil.jpg" alt="Foto de perfil" class="fotoPerfil">
+                    <p>Comencé mis estudios de programacion en <a href="https://www.biosportal.com/"
+                            target="_blank">BIOS</a> con el curso de 3 años de Analista en Sistemas, donde en el
+                        transcurso aprendi tecnologias como C#, SQL Server, ASP.NET, LINQ, MVC, SOA, Entity
+                        Framework,
+                        Servicios WCF, y obtuve un certificado de Genexus Junior Analyst.</p>
+                    <p>Luego entre lo que adquirí en BIOS, realizé un curso en <a
+                            href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a
+                            Programar</a> del programa lanzado por Ceibal, donde adquirí conocimientos en
+                        Javascript,
+                        Bootstrap, tambien el manejo de DOM y JQuery, curso donde tambien nos enseñaron mucho sobre
+                        Competencias transversales, ayudandonos en el area tanto personal para crecer nosotros, como
+                        en
+                        lo laboral para construir nuestro futuro.</p>
+                    <p>En este momento me encuentro en la busqueda de mi primera experiencia laboral en el rubro IT.
+                    </p>
+                </div>
 
+            </div>
             <!-- PROYECTOS -->
             <div class='container col-lg-7 col-md-12 col-sm-12' id="proyectos">
                 <!-- League of legends client -->
@@ -285,27 +272,28 @@
             <div class='container col-lg-2 col-md-4 col-sm-12 text-primary border border-primary bg-info bg-opacity-50 text-center'
                 id="contacto">
                 <u>
-                    <h3 class="text-secondary">Contacto</h3>
+                    <h3 class="text-secondary cv">Contacto</h3>
                 </u>
                 <p><a href="https://www.linkedin.com/in/agustin-fabian-bravo-bello-a53976222/" target="_blank"
                         id="linkLinkedIn"><i style="font-size: x-large;"
-                            class="fa fa-linkedin-square text-secondary btn btn-outline-primary rounded-pill"></i></a>
+                            class="fa fa-linkedin-square text-secondary btn btn-outline-primary rounded-pill cv"></i></a>
                     <a href="https://www.instagram.com/urubrave52/" target="_blank" id="linkInstagram"> <i
                             style="font-size: x-large;"
-                            class="fa fa-instagram text-secondary btn btn-outline-primary rounded-pill"></i></a> <a
+                            class="fa fa-instagram text-secondary btn btn-outline-primary rounded-pill cv"></i></a> <a
                         href="https://github.com/agusbrave52" target="_blank" id="linkGitHub"> <i
                             style="font-size: x-large;"
-                            class="fa fa-github text-secondary btn btn-outline-primary rounded-pill"></i></a></p>
+                            class="fa fa-github text-secondary btn btn-outline-primary rounded-pill cv"></i></a>
+                </p>
             </div>
 
             <!-- Descargar CV -->
             <div class='container col-lg-2 col-md-4 col-sm-12 text-primary bg-info bg-opacity-50 text-center border border-primary'
                 id="descargar">
                 <u>
-                    <h3 class="text-secondary">Descargar CV</h3>
+                    <h3 class="text-secondary cv">Descargar CV</h3>
                 </u>
                 <p><a href="./img/CV AFBB (Programacion).pdf" target="_blank"
-                        class="btn btn-outline-primary">Descargar</a></p>
+                        class="btn btn-outline-primary cv">Descargar</a></p>
             </div>
 
         </section>

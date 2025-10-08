@@ -11877,38 +11877,47 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: -1;
+  animation: fondo-cambio 10s alternate infinite;
 }
 .imgFondo.marron {
   filter: hue-rotate(140deg) sepia(0.3) saturate(0.8) brightness(1);
   transition: filter 0.5s ease;
+  animation: fondo-cambio-marron 10s alternate infinite;
 }
 .imgFondo.verde {
   filter: hue-rotate(235deg) sepia(0) saturate(0.5) brightness(1.4);
   transition: filter 0.5s ease;
+  animation: fondo-cambio-verde 10s alternate infinite;
 }
 .imgFondo.vintage {
   filter: hue-rotate(170deg) sepia(0.4) saturate(1) brightness(1.2);
   transition: filter 0.5s ease;
+  animation: fondo-cambio-vintage 10s alternate infinite;
 }
 .imgFondo.cyan {
   filter: hue-rotate(320deg) sepia(0) saturate(0.8) brightness(1.6);
   transition: filter 0.5s ease;
+  animation: fondo-cambio-cyan 10s alternate infinite;
 }
 .imgFondo.navy {
   filter: hue-rotate(0deg) sepia(0) saturate(1.4) brightness(1.3);
   transition: filter 0.5s ease;
+  animation: fondo-cambio-navy 10s alternate infinite;
 }
 .imgFondo.violet {
   filter: hue-rotate(30deg) sepia(0) saturate(1) brightness(1.2);
   transition: filter 0.5s ease;
+  animation: fondo-cambio-violet 10s alternate infinite;
 }
 .imgFondo.halloween {
   filter: hue-rotate(150deg) sepia(0) saturate(1.2) brightness(1.2);
   transition: filter 0.5s ease;
+  animation: fondo-cambio-halloween 10s alternate infinite;
 }
 .imgFondo.retro {
   filter: hue-rotate(110deg) sepia(0) saturate(0.6) brightness(1.4);
   transition: filter 0.5s ease;
+  animation: fondo-cambio-retro 10s alternate infinite;
 }
 
 .hr1 {
@@ -11928,10 +11937,42 @@ body {
   box-shadow: 0px 5px 10px var(--my-primary);
 }
 
-.fotoPerfil {
+.imgPerfil {
   position: relative;
   width: 90px;
   margin-bottom: 10px;
+  animation: moverFoto 2s infinite ease-in-out alternate;
+}
+
+.colorImgPerfil {
+  fill: var(--my-primary);
+}
+
+.fotoPerfil {
+  width: 200px;
+  height: 260px;
+  box-shadow: 0 0 15px var(--my-primary);
+  margin-right: 20px;
+  float: left;
+  margin-bottom: 15px;
+}
+
+.container-sobreMi {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .container-sobreMi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .container-sobreMi .fotoPerfil {
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 150px;
+    height: 200px;
+  }
 }
 
 main div div .btn:hover {
@@ -12151,6 +12192,94 @@ main div div .btn:hover {
   }
   100% {
     transform: translateY(0) scale(1);
+  }
+}
+@keyframes fondo-cambio {
+  0% {
+    filter: brightness(0.8);
+  }
+  100% {
+    filter: brightness(1.8);
+  }
+}
+@keyframes fondo-cambio-marron {
+  0% {
+    filter: hue-rotate(140deg) sepia(0.3) saturate(0.8) brightness(0.8);
+  }
+  100% {
+    filter: hue-rotate(140deg) sepia(0.3) saturate(0.8) brightness(1.8);
+  }
+}
+@keyframes fondo-cambio-verde {
+  0% {
+    filter: hue-rotate(235deg) sepia(0) saturate(0.5) brightness(0.8);
+  }
+  100% {
+    filter: hue-rotate(235deg) sepia(0) saturate(0.5) brightness(1.8);
+  }
+}
+@keyframes fondo-cambio-verde {
+  0% {
+    filter: hue-rotate(235deg) sepia(0) saturate(0.5) brightness(0.8);
+  }
+  100% {
+    filter: hue-rotate(235deg) sepia(0) saturate(0.5) brightness(1.8);
+  }
+}
+@keyframes fondo-cambio-vintage {
+  0% {
+    filter: hue-rotate(170deg) sepia(0.4) saturate(1) brightness(0.8);
+  }
+  100% {
+    filter: hue-rotate(170deg) sepia(0.4) saturate(1) brightness(1.8);
+  }
+}
+@keyframes fondo-cambio-cyan {
+  0% {
+    filter: hue-rotate(320deg) sepia(0) saturate(0.8) brightness(0.8);
+  }
+  100% {
+    filter: hue-rotate(320deg) sepia(0) saturate(0.8) brightness(1.8);
+  }
+}
+@keyframes fondo-cambio-navy {
+  0% {
+    filter: hue-rotate(0deg) sepia(0) saturate(1.4) brightness(0.8);
+  }
+  100% {
+    filter: hue-rotate(0deg) sepia(0) saturate(1.4) brightness(1.8);
+  }
+}
+@keyframes fondo-cambio-violet {
+  0% {
+    filter: hue-rotate(30deg) sepia(0) saturate(1) brightness(0.8);
+  }
+  100% {
+    filter: hue-rotate(30deg) sepia(0) saturate(1) brightness(1.8);
+  }
+}
+@keyframes fondo-cambio-halloween {
+  0% {
+    filter: hue-rotate(150deg) sepia(0) saturate(1.2) brightness(0.8);
+  }
+  100% {
+    filter: hue-rotate(150deg) sepia(0) saturate(1.2) brightness(1.8);
+  }
+}
+@keyframes fondo-cambio-retro {
+  0% {
+    filter: hue-rotate(110deg) sepia(0) saturate(0.6) brightness(0.8);
+  }
+  100% {
+    filter: hue-rotate(110deg) sepia(0) saturate(0.6) brightness(1.8);
+  }
+}
+@keyframes moverFoto {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
   }
 }
 

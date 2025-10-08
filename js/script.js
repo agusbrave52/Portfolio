@@ -18,19 +18,18 @@ function toggleSection(sectionId) {
 
     // mostrar/ocultar la sección seleccionada
     const section = document.querySelector(`#${sectionId}`);
-    if (section === 'habilidades') {
+    if (sectionId === 'habilidades' || sectionId === 'sobreMi') {
         section.style.display = section.style.display === "flex" ? "none" : "flex";
     }
-    else{
+    else {
         section.style.display = section.style.display === "block" ? "none" : "block";
     }
-};
-
+}
 function addDynamicCSS(css) {
     // Eliminar todos los estilos dinámicos anteriores
     const existingDynamicStyles = document.querySelectorAll('style[data-dynamic="true"]');
     existingDynamicStyles.forEach(style => style.remove());
-    
+
     // Crear nuevo elemento <style> 
     const style = document.createElement('style');
     style.setAttribute('data-dynamic', 'true'); // Marca para identificar estilos dinámicos
@@ -56,18 +55,11 @@ function createColorTheme(primary, secondary, info, dark, nameTheme) {
             --bs-dark: var(--my-dark);
         }
 
-        .btn-outline-primary {
-            --bs-btn-color: var(--my-primary);
-            --bs-btn-border-color: var(--my-primary);
-            --bs-btn-hover-color: #000;
-            --bs-btn-hover-bg: var(--my-primary);
-            --bs-btn-hover-border-color: var(--my-primary);
-            --bs-btn-active-color: #000;
-            --bs-btn-active-bg: var(--my-primary);
-            --bs-btn-active-border-color: var(--my-primary);
-            --bs-btn-disabled-color: var(--my-primary);
-            --bs-btn-disabled-border-color: var(--my-primary);
-        }
+        .btn-outline-primary {--bs-btn-color: var(--my-primary);--bs-btn-border-color: var(--my-primary);--bs-btn-hover-color: #000;--bs-btn-hover-bg: var(--my-primary);--bs-btn-hover-border-color: var(--my-primary);--bs-btn-active-color: #000;--bs-btn-active-bg: var(--my-primary);--bs-btn-active-border-color: var(--my-primary);--bs-btn-disabled-color: var(--my-primary);--bs-btn-disabled-border-color: var(--my-primary);}
+        .btn-outline-secondary {--bs-btn-color: var(--my-secondary);--bs-btn-border-color: var(--my-secondary);--bs-btn-hover-color: #000;--bs-btn-hover-bg: var(--my-secondary);--bs-btn-hover-border-color: var(--my-secondary);--bs-btn-active-color: #000;--bs-btn-active-bg: var(--my-secondary);--bs-btn-active-border-color: var(--my-secondary);--bs-btn-disabled-color: var(--my-secondary);--bs-btn-disabled-border-color: var(--my-secondary);}
+        .btn-outline-info {--bs-btn-color: var(--my-info);--bs-btn-border-color: var(--my-info);--bs-btn-hover-color: #000;--bs-btn-hover-bg: var(--my-info);--bs-btn-hover-border-color: var(--my-info);--bs-btn-active-color: #000;--bs-btn-active-bg: var(--my-info);--bs-btn-active-border-color: var(--my-info);--bs-btn-disabled-color: var(--my-info);--bs-btn-disabled-border-color: var(--my-info);}
+        .btn-outline-dark {--bs-btn-color: var(--my-dark);--bs-btn-border-color: var(--my-dark);--bs-btn-hover-color: #000;--bs-btn-hover-bg: var(--my-dark);--bs-btn-hover-border-color: var(--my-dark);--bs-btn-active-color: #000;--bs-btn-active-bg: var(--my-dark);--bs-btn-active-border-color: var(--my-dark);--bs-btn-disabled-color: var(--my-dark);--bs-btn-disabled-border-color: var(--my-dark);}
+        
         .bg-primary {background-color: var(--my-primary) !important;}
         .bg-secondary {background-color: var(--my-secondary) !important;}
         .bg-info {background-color: var(--my-info) !important;}
@@ -87,6 +79,75 @@ function createColorTheme(primary, secondary, info, dark, nameTheme) {
     const imagenFondo = document.querySelector('.imgFondo');
     imagenFondo.classList.remove('marron', 'verde', 'cyan', 'violet', 'navy', 'halloween', 'vintage', 'retro');
     imagenFondo.classList.add(nameTheme);
+
+    // Traer los elementos del DOM que necesitan cambios específicos
+    const buttons = document.querySelectorAll('.btn-outline-primary, .btn-outline-dark');
+    const hrs = document.querySelectorAll('.hr1');
+    const hrs2 = document.querySelectorAll('.hr2');
+    const hrs3 = document.querySelectorAll('.hr3');
+    const colorImgPerfil = document.querySelectorAll('.colorImgPerfil');
+    const cvButton = document.querySelectorAll('.cv');
+
+    // Cambiar las clases de los botones de CV según el tema
+    if (nameTheme === 'vintage') {
+        cvButton.forEach(button => {
+            button.classList.remove('btn-outline-primary');
+            button.classList.add('btn-outline-secondary');
+            if (button.classList.contains('text-secondary')) {
+                button.classList.remove('text-secondary');
+                button.classList.add('text-dark');
+            }
+        });
+    }
+    else {
+        cvButton.forEach(button => {
+            button.classList.remove('btn-outline-secondary');
+            button.classList.add('btn-outline-primary');
+            if (button.classList.contains('text-dark')) {
+                button.classList.remove('text-dark');
+                button.classList.add('text-secondary');
+            }
+        });
+    }
+
+    // Cambiar estilos específicos según el tema
+    if (nameTheme === 'marron') {
+        buttons.forEach(button => {
+            button.classList.remove('btn-outline-primary');
+            button.classList.add('btn-outline-dark');
+        });
+        hrs.forEach(hr => {
+            hr.style.borderColor = 'var(--my-dark)';
+        });
+        hrs2.forEach(hr => {
+            hr.style.boxShadow = `0 -5px 10px var(--my-dark)`;
+        });
+        hrs3.forEach(hr => {
+            hr.style.boxShadow = `0 5px 10px var(--my-dark)`;
+        });
+        colorImgPerfil.forEach(path => {
+            path.style.fill = 'var(--my-dark)';
+        });
+    }
+    else {
+        buttons.forEach(button => {
+            button.classList.remove('btn-outline-dark');
+            button.classList.add('btn-outline-primary');
+        });
+        hrs.forEach(hr => {
+            hr.style.borderColor = 'var(--my-primary)';
+        });
+        hrs2.forEach(hr => {
+            hr.style.boxShadow = `0 -5px 10px var(--my-primary)`;
+        });
+        hrs3.forEach(hr => {
+            hr.style.boxShadow = `0 5px 10px var(--my-primary)`;
+        });
+        colorImgPerfil.forEach(path => {
+            path.style.fill = 'var(--my-primary)';
+        });
+    }
+
     // Aplicar el nuevo tema
     addDynamicCSS(themeCSS);
 };
@@ -240,3 +301,4 @@ function IniciarInfoConMouse() {
         infoTooltip.style.display = 'none';
     });
 };
+
