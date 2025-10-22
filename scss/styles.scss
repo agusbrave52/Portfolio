@@ -29,7 +29,7 @@ body {
     z-index: -1;
     animation: fondo-cambio 10s alternate infinite;
 
-    
+
 
     &.marron {
         filter: hue-rotate(140deg) sepia(0.3) saturate(0.8) brightness(1); //marron
@@ -56,7 +56,7 @@ body {
     }
 
     &.navy {
-        filter:hue-rotate(0deg) sepia(0) saturate(1.4) brightness(1.3); //navy
+        filter: hue-rotate(0deg) sepia(0) saturate(1.4) brightness(1.3); //navy
         transition: filter 0.5s ease;
         animation: fondo-cambio-navy 10s alternate infinite;
     }
@@ -104,11 +104,12 @@ body {
     margin-bottom: 10px;
     animation: moverFoto 2s infinite ease-in-out alternate;
 }
-.colorImgPerfil{
+
+.colorImgPerfil {
     fill: var(--my-primary);
 }
 
-.fotoPerfil{
+.fotoPerfil {
     width: 200px;
     height: 260px;
     box-shadow: 0 0 15px var(--my-primary);
@@ -116,7 +117,8 @@ body {
     float: left;
     margin-bottom: 15px;
 }
-.container-sobreMi{
+
+.container-sobreMi {
     display: block;
 
     @media screen and (max-width: 768px) {
@@ -131,11 +133,9 @@ body {
             width: 150px;
             height: 200px;
         }
-        
+
     }
 }
-
-
 
 main {
     div {
@@ -175,11 +175,12 @@ main {
     position: absolute;
     display: none;
     top: 10px;
-    right: 60px;
+    right: 70px;
     width: 160px;
     height: 102px;
     border: 2px solid #252c31;
     flex-wrap: wrap;
+    overflow: hidden;
 
     span {
         height: 18px;
@@ -379,47 +380,113 @@ main {
         transform: translateY(0) scale(1);
     }
 }
+
 @keyframes fondo-cambio {
-        0% {filter: brightness(0.8);}
-        100% {filter: brightness(1.8);}
+    0% {
+        filter: brightness(0.8);
     }
+
+    100% {
+        filter: brightness(1.8);
+    }
+}
+
 @keyframes fondo-cambio-marron {
-    0% {filter:hue-rotate(140deg) sepia(0.3) saturate(0.8) brightness(0.8);}
-    100% {filter:hue-rotate(140deg) sepia(0.3) saturate(0.8) brightness(1.8);}
+    0% {
+        filter: hue-rotate(140deg) sepia(0.3) saturate(0.8) brightness(0.8);
+    }
+
+    100% {
+        filter: hue-rotate(140deg) sepia(0.3) saturate(0.8) brightness(1.8);
+    }
 }
+
 @keyframes fondo-cambio-verde {
-    0% {filter:hue-rotate(235deg) sepia(0) saturate(0.5) brightness(0.8);}
-    100% {filter:hue-rotate(235deg) sepia(0) saturate(0.5) brightness(1.8);}
+    0% {
+        filter: hue-rotate(235deg) sepia(0) saturate(0.5) brightness(0.8);
+    }
+
+    100% {
+        filter: hue-rotate(235deg) sepia(0) saturate(0.5) brightness(1.8);
+    }
 }
+
 @keyframes fondo-cambio-verde {
-    0% {filter: hue-rotate(235deg) sepia(0) saturate(0.5) brightness(0.8);}
-    100% {filter: hue-rotate(235deg) sepia(0) saturate(0.5) brightness(1.8);}
+    0% {
+        filter: hue-rotate(235deg) sepia(0) saturate(0.5) brightness(0.8);
+    }
+
+    100% {
+        filter: hue-rotate(235deg) sepia(0) saturate(0.5) brightness(1.8);
+    }
 }
+
 @keyframes fondo-cambio-vintage {
-    0% {filter: hue-rotate(170deg) sepia(0.4) saturate(1) brightness(0.8);}
-    100% {filter: hue-rotate(170deg) sepia(0.4) saturate(1) brightness(1.8);}
+    0% {
+        filter: hue-rotate(170deg) sepia(0.4) saturate(1) brightness(0.8);
+    }
+
+    100% {
+        filter: hue-rotate(170deg) sepia(0.4) saturate(1) brightness(1.8);
+    }
 }
+
 @keyframes fondo-cambio-cyan {
-    0% {filter: hue-rotate(320deg) sepia(0) saturate(0.8) brightness(0.8);}
-    100% {filter: hue-rotate(320deg) sepia(0) saturate(0.8) brightness(1.8);}
+    0% {
+        filter: hue-rotate(320deg) sepia(0) saturate(0.8) brightness(0.8);
+    }
+
+    100% {
+        filter: hue-rotate(320deg) sepia(0) saturate(0.8) brightness(1.8);
+    }
 }
+
 @keyframes fondo-cambio-navy {
-    0% {filter: hue-rotate(0deg) sepia(0) saturate(1.4) brightness(0.8);}
-    100% {filter: hue-rotate(0deg) sepia(0) saturate(1.4) brightness(1.8);}
+    0% {
+        filter: hue-rotate(0deg) sepia(0) saturate(1.4) brightness(0.8);
+    }
+
+    100% {
+        filter: hue-rotate(0deg) sepia(0) saturate(1.4) brightness(1.8);
+    }
 }
+
 @keyframes fondo-cambio-violet {
-    0% {filter: hue-rotate(30deg) sepia(0) saturate(1) brightness(0.8);}
-    100% {filter: hue-rotate(30deg) sepia(0) saturate(1) brightness(1.8);}
+    0% {
+        filter: hue-rotate(30deg) sepia(0) saturate(1) brightness(0.8);
+    }
+
+    100% {
+        filter: hue-rotate(30deg) sepia(0) saturate(1) brightness(1.8);
+    }
 }
+
 @keyframes fondo-cambio-halloween {
-    0% {filter: hue-rotate(150deg) sepia(0) saturate(1.2) brightness(0.8);}
-    100% {filter: hue-rotate(150deg) sepia(0) saturate(1.2) brightness(1.8);}
+    0% {
+        filter: hue-rotate(150deg) sepia(0) saturate(1.2) brightness(0.8);
+    }
+
+    100% {
+        filter: hue-rotate(150deg) sepia(0) saturate(1.2) brightness(1.8);
+    }
 }
+
 @keyframes fondo-cambio-retro {
-    0% {filter: hue-rotate(110deg) sepia(0) saturate(0.6) brightness(0.8);}
-    100% {filter: hue-rotate(110deg) sepia(0) saturate(0.6) brightness(1.8);}
+    0% {
+        filter: hue-rotate(110deg) sepia(0) saturate(0.6) brightness(0.8);
+    }
+
+    100% {
+        filter: hue-rotate(110deg) sepia(0) saturate(0.6) brightness(1.8);
+    }
 }
+
 @keyframes moverFoto {
-    0% {transform: translateY(0);}
-    100% {transform: translateY(-10px);}
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
 }

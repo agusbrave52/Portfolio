@@ -12003,11 +12003,12 @@ main div div .btn:hover {
   position: absolute;
   display: none;
   top: 10px;
-  right: 60px;
+  right: 70px;
   width: 160px;
   height: 102px;
   border: 2px solid #252c31;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 .botones span {
   height: 18px;
