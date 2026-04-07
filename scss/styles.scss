@@ -361,6 +361,12 @@ main {
     transition: opacity 0.15s;
 }
 
+.imagenFondo{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 @keyframes bounceInUp {
     0% {
         opacity: 0;
