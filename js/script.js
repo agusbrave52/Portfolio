@@ -191,9 +191,24 @@ function IniciarInfoConMouse() {
     const btnLinkedIn = document.getElementById('linkLinkedIn');
     const btnInstagram = document.getElementById('linkInstagram');
     const btnGitHub = document.getElementById('linkGitHub');
+    const proyectos = document.getElementsByClassName('imagenFondo');
 
     // Tooltip de información para el mouse
     const infoTooltip = document.getElementById('info-mouse');
+
+    //Eventos para mostrar el tooltip al pasar el mouse sobre cada proyecto
+    Array.from(proyectos).forEach(proyecto => {
+        proyecto.addEventListener('mousemove', (e) => {
+            infoTooltip.style.display = 'block';
+            infoTooltip.textContent = `Ver en GitHub`;
+            infoTooltip.style.left = (e.clientX - 120) + 'px';
+            infoTooltip.style.top = (e.clientY + 25) + 'px';
+        });
+
+        proyecto.addEventListener('mouseleave', () => {
+            infoTooltip.style.display = 'none';
+        });
+    });
 
     // Eventos para mostrar el tooltip al pasar el mouse sobre cada botón
     pltMarron.addEventListener('mousemove', (e) => {
