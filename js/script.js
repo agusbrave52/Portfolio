@@ -55,6 +55,10 @@ function createColorTheme(primary, secondary, info, dark, nameTheme) {
             --bs-dark: var(--my-dark);
         }
 
+        .btn-primary {--bs-btn-bg: var(--my-primary);--bs-btn-border-color: var(--my-primary);--bs-btn-color: #000;--bs-btn-hover-bg: var(--my-primary);--bs-btn-hover-border-color: var(--my-primary);--bs-btn-hover-color: #000;--bs-btn-active-bg: var(--my-primary);--bs-btn-active-border-color: var(--my-primary);--bs-btn-active-color: #000;--bs-btn-disabled-bg: var(--my-primary);--bs-btn-disabled-border-color: var(--my-primary);--bs-btn-disabled-color: #000;}
+        .btn-secondary {--bs-btn-bg: var(--my-secondary);--bs-btn-border-color: var(--my-secondary);--bs-btn-color: #fff;--bs-btn-hover-bg: var(--my-secondary);--bs-btn-hover-border-color: var(--my-secondary);--bs-btn-hover-color: #fff;--bs-btn-active-bg: var(--my-secondary);--bs-btn-active-border-color: var(--my-secondary);--bs-btn-active-color: #fff;--bs-btn-disabled-bg: var(--my-secondary);--bs-btn-disabled-border-color: var(--my-secondary);--bs-btn-disabled-color: #fff;}
+        .btn-info {--bs-btn-bg: var(--my-info);--bs-btn-border-color: var(--my-info);--bs-btn-color: #fff;--bs-btn-hover-bg: var(--my-info);--bs-btn-hover-border-color: var(--my-info);--bs-btn-hover-color: #fff;--bs-btn-active-bg: var(--my-info);--bs-btn-active-border-color: var(--my-info);--bs-btn-active-color: #fff;--bs-btn-disabled-bg: var(--my-info);--bs-btn-disabled-border-color: var(--my-info);--bs-btn-disabled-color: #fff;}
+        .btn-dark {--bs-btn-bg: var(--my-dark);--bs-btn-border-color: var(--my-dark);--bs-btn-color: #fff;--bs-btn-hover-bg: var(--my-dark);--bs-btn-hover-border-color: var(--my-dark);--bs-btn-hover-color: #fff;--bs-btn-active-bg: var(--my-dark);--bs-btn-active-border-color: var(--my-dark);--bs-btn-active-color: #fff;--bs-btn-disabled-bg: var(--my-dark);--bs-btn-disabled-border-color: var(--my-dark);--bs-btn-disabled-color: #fff;}
         .btn-outline-primary {--bs-btn-color: var(--my-primary);--bs-btn-border-color: var(--my-primary);--bs-btn-hover-color: #000;--bs-btn-hover-bg: var(--my-primary);--bs-btn-hover-border-color: var(--my-primary);--bs-btn-active-color: #000;--bs-btn-active-bg: var(--my-primary);--bs-btn-active-border-color: var(--my-primary);--bs-btn-disabled-color: var(--my-primary);--bs-btn-disabled-border-color: var(--my-primary);}
         .btn-outline-secondary {--bs-btn-color: var(--my-secondary);--bs-btn-border-color: var(--my-secondary);--bs-btn-hover-color: #000;--bs-btn-hover-bg: var(--my-secondary);--bs-btn-hover-border-color: var(--my-secondary);--bs-btn-active-color: #000;--bs-btn-active-bg: var(--my-secondary);--bs-btn-active-border-color: var(--my-secondary);--bs-btn-disabled-color: var(--my-secondary);--bs-btn-disabled-border-color: var(--my-secondary);}
         .btn-outline-info {--bs-btn-color: var(--my-info);--bs-btn-border-color: var(--my-info);--bs-btn-hover-color: #000;--bs-btn-hover-bg: var(--my-info);--bs-btn-hover-border-color: var(--my-info);--bs-btn-active-color: #000;--bs-btn-active-bg: var(--my-info);--bs-btn-active-border-color: var(--my-info);--bs-btn-disabled-color: var(--my-info);--bs-btn-disabled-border-color: var(--my-info);}
@@ -82,6 +86,7 @@ function createColorTheme(primary, secondary, info, dark, nameTheme) {
 
     // Traer los elementos del DOM que necesitan cambios específicos
     const buttons = document.querySelectorAll('.btn-outline-primary, .btn-outline-dark');
+    const buttonsEnteros = document.querySelectorAll('.btn-primary, .btn-secondary, .btn-info, .btn-dark');
     const hrs = document.querySelectorAll('.hr1');
     const hrs2 = document.querySelectorAll('.hr2');
     const hrs3 = document.querySelectorAll('.hr3');
@@ -145,6 +150,17 @@ function createColorTheme(primary, secondary, info, dark, nameTheme) {
         });
         colorImgPerfil.forEach(path => {
             path.style.fill = 'var(--my-primary)';
+        });
+    }
+    if (nameTheme === 'verde'){
+        buttonsEnteros.forEach(button => {
+            button.classList.remove('btn-dark');
+            button.classList.add('btn-primary');
+        });
+    }else{
+        buttonsEnteros.forEach(button => {
+            button.classList.remove('btn-primary');
+            button.classList.add('btn-dark');
         });
     }
 
